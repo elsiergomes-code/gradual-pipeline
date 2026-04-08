@@ -1,0 +1,23 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "LinkedIn OAuth Server",
+      "runtimeExecutable": "venv/Scripts/python",
+      "runtimeArgs": ["auth_server.py"],
+      "port": 8080
+    },
+    {
+      "name": "Pipeline Scheduler (every 2 days)",
+      "runtimeExecutable": "venv/Scripts/python",
+      "runtimeArgs": ["main.py"],
+      "port": null
+    },
+    {
+      "name": "Pipeline Run Now (one-shot)",
+      "runtimeExecutable": "venv/Scripts/python",
+      "runtimeArgs": ["main.py", "--run-now"],
+      "port": null
+    }
+  ]
+}
