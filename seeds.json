@@ -2,41 +2,85 @@
   {
     "id": "float_tool",
     "pillar": "AI + Work",
-    "hook": "I started at Fairmont with zero coding background. My manager noticed an Excel file I built to track the front desk cash float. It auto-timestamps every transaction, auto-calculates the remaining balance, has a drop-down so Elsie as an agent would never type the wrong transaction type. No arithmetic signs needed — just enter the number and it handles the math. I built it to understand how I can ease my work during high pressure times at the front with more than 100 checkins everyday and how to minimize number of errors in early months working with new systems. so the tool not only proved how AI can be helpful to build a tool efficiently for efficiency as well as ease my mind during service."
+    "post_type": "document",
+    "hook": "I built a float management tool for Fairmont's front desk in a chat window. Zero coding background. It auto-timestamps every transaction, auto-calculates the remaining cash balance, has a drop-down so agents never type the wrong transaction type. No arithmetic signs needed — just enter the number. My manager called it my next project. I built it because the manual process was wasting 20 minutes every shift."
   },
   {
-    "id": "mom_augustina",
-    "pillar": "House of Augustina",
-    "hook": "My mom Augustina is a fashion designer who never charged what her work was worth. Since I was a kid, my sister and I had the best couture dresses in Dhaka — in a city where fashion is rare. Her portfolio had every sketch, every colour palette, everything. She loved the craft so much she forgot to love the money. House of Augustina is finishing what she started. I'm the daughter who understands the market."
-  },
-  {
-    "id": "colour_wheel_origin",
+    "id": "colour_wheel_build",
     "pillar": "AI Tools",
-    "hook": "I got tired of manually hunting for colour combinations apps across all app stores to set a colour palette every time I started a new project — a logo, an outfit, a website, an edit. So I built an app that does the math. You pick a base colour, you tell it the mood and what you're making, and it generates the full palette with correct contrast and harmony. It's live at wheel.houseofaugustina.com and it's free. I made it in Lovable, deployed on Vercel, connected a custom API. The whole thing took less than two weeks and I had never built an app before."
+    "post_type": "document",
+    "hook": "I built the Infinite Colour Wheel in Lovable, deployed it on Vercel, connected a custom palette API at api.houseofaugustina.com, then plugged it into a custom ChatGPT. The whole thing took under two weeks. I had never built an app before. The part that took longest was understanding the difference between the frontend and the API — not the building, the understanding. Once I got that, the rest moved fast."
+  },
+  {
+    "id": "email_pipeline_break",
+    "pillar": "AI Tools",
+    "post_type": "document",
+    "hook": "My Make.com email triage pipeline deleted a Masterclass access link the day it arrived. The workflow was working — it just didn't know that a noreply email could be important. I had to rebuild the classification logic with a priority hierarchy: IMPORTANT first, then everything else. The lesson was not about the tool. It was about the order you tell the AI to think in."
+  },
+  {
+    "id": "gradual_incorporated",
+    "pillar": "Gradual Holdings",
+    "post_type": "document",
+    "hook": "I incorporated Gradual Holdings Inc. before I had a single client. First thing I did after that was map the IP — what the HoldCo owns, what the OpCo licenses. Execution Brief template, Infinite Colour Wheel app, the canvas painting series. All of it owned at the top before any revenue moves. Most people build and figure out ownership later. I drew the structure first."
+  },
+  {
+    "id": "ai_not_tool",
+    "pillar": "Gradual Holdings",
+    "post_type": "insight",
+    "hook": "People keep calling AI a tool. A hammer is a tool. You pick it up, you put it down. AI doesn't work like that. Once you build a system with it — an email triage pipeline, a scheduling automation, a content engine — you don't put it down. It runs while you sleep. It's infrastructure. The companies treating it like a tool are going to wake up one day and realise their competitors built a system."
+  },
+  {
+    "id": "specificity_is_trust",
+    "pillar": "AI + Work",
+    "post_type": "insight",
+    "hook": "The difference between AI content that sounds like AI and AI content that sounds like a person is specificity. Generic prompt gets a generic answer. The moment you give it a real detail — a specific tool, a specific number, a specific thing that broke — it anchors. The output stops floating. Most people are prompting at the level of their idea, not the level of their experience. Those are two very different levels."
+  },
+  {
+    "id": "one_person_team",
+    "pillar": "Gradual Holdings",
+    "post_type": "insight",
+    "hook": "A year ago, running a LinkedIn content pipeline, a colour tool app, a painting series, an import business, and a hospitality career simultaneously would have needed a team of at least five people. Right now I am doing all of it. Not because I am exceptional. Because AI ate the gap between having an idea and executing it. That gap used to be called 'you need resources.' Now it is called 'you need clarity.'"
+  },
+  {
+    "id": "execution_clarity",
+    "pillar": "Gradual Holdings",
+    "post_type": "insight",
+    "hook": "The bottleneck has never been skill. It has never been capital. The bottleneck has always been the distance between the idea in your head and the first real action. AI doesn't give you skills. It doesn't give you money. It collapses that distance. That is the only thing it does. That is the only thing that matters."
+  },
+  {
+    "id": "automation_vs_system",
+    "pillar": "AI Tools",
+    "post_type": "tension",
+    "hook": "There is a version of AI adoption where you automate everything and stop thinking. There is another version where you design the system yourself and the AI executes your thinking. The first version makes you dependent. The second makes you powerful. The tension is that most people start with the first because it is faster — and they never make it to the second because the first feels like it is working."
+  },
+  {
+    "id": "building_in_public_risk",
+    "pillar": "Gradual Holdings",
+    "post_type": "tension",
+    "hook": "Building in public means showing the work before it is finished. That is the point — the unfinished state is what makes people follow. But there is a version of building in public that performs vulnerability without being actually vulnerable. I catch myself doing it. Showing the progress but not the doubt. Showing the tool but not the moment I almost stopped. I don't know yet where the line is between strategic transparency and the real thing."
+  },
+  {
+    "id": "done_for_them_vs_teach",
+    "pillar": "AI + Work",
+    "post_type": "tension",
+    "hook": "Every client I talk to says they want to learn how to use AI. What they actually want is for their problem to be solved. Done-for-them beats teach-them-how every single time in terms of what they will pay for and how fast they will buy. But done-for-them creates dependency. Teach-them-how creates capability. I keep going back and forth on which one Gradual Holdings should be. Maybe the answer is both. Maybe that is the wrong frame entirely."
   },
   {
     "id": "pandemic_start",
     "pillar": "Origin",
-    "hook": "I landed in Canada in August 2019. By March 2020 everything was locked down. Online classes, no human contact, no 1-on-1 with professors, rent was always on time because i was always resourceful on how to get the job done even in the hardest of the situations. those skills help me to date and learnt by seeing parents as examples and by being trained by them too. I worked nights at Loblaws and days as an admin assistant for a consulting firm, studying accounting full-time. That pressure is where I stopped waiting for permission. I learned to trust myself because there was genuinely no one else available."
+    "post_type": "document",
+    "hook": "I landed in Canada in August 2019. By March 2020 everything was locked down. I worked nights at Loblaws and days as an admin assistant, studying accounting full-time, alone in a country I had been in for six months. That period taught me one thing that has not changed: the only way out of uncertainty is through output. You cannot think your way out. You build your way out."
   },
   {
-    "id": "holdco_structure",
-    "pillar": "Gradual Holdings",
-    "hook": "I incorporated Gradual Holdings Inc. before I had a single client. The IP comes first — Execution Brief template, Infinite Colour Wheel app, the canvas painting series — all owned by the HoldCo, licensed to the operating companies. That's the structure. Most people build the business first and figure out ownership later. I drew the diagram first. Because I watched too many people lose the thing they made."
-  },
-  {
-    "id": "art_class_dhaka",
-    "pillar": "Art",
-    "hook": "I had an art class in Dhaka for a year and a half. Three hours in that room felt like nothing — no time, no hunger, no noise from outside. I exhibited work with my classmates. That feeling of being fully inside a thing is the only benchmark I use now for whether a project is worth doing. If it doesn't have that pull, it's not the right project yet."
-  },
-  {
-    "id": "gradual_mission",
-    "pillar": "Gradual Holdings",
-    "hook": "The company is called Gradual Holdings because nothing that lasts gets built fast. The slogan is: where raw state becomes refined reality. Raw state is the idea in your head at 2am that you haven't told anyone yet. Refined reality is the thing that exists in the world and works. AI is what closes the gap between those two things faster than any other tool in history. That's the entire business model."
+    "id": "mom_augustina",
+    "pillar": "House of Augustina",
+    "post_type": "insight",
+    "hook": "My mother Augustina is a fashion designer who never charged what her work was worth. Since I was a child, my sister and I had the best couture dresses in Dhaka — in a city where most people didn't know what couture was. Her portfolio had everything. Sketches, colour palettes, decades of craft. She loved the work so much she forgot to love the money. House of Augustina exists because talent without structure disappears. I watched it happen."
   },
   {
     "id": "sewing_graduation",
     "pillar": "House of Augustina",
-    "hook": "My diploma is in accounting. I hand-sewed my graduation dress. No machine, no pattern software, no formal training beyond A-levels. I drew the design first, then cut the fabric, then stitched it. It fit. That dress is proof of concept — not for fashion, but for the idea that what you were built to do will come out regardless of what credential you're holding."
+    "post_type": "tension",
+    "hook": "My diploma is in accounting. I hand-sewed my graduation dress — no machine, no pattern software. I drew the design, cut the fabric, stitched it myself. It fit. I have been trying to figure out ever since whether the accounting was the detour or the foundation. I still don't have a clean answer. Maybe both things are true at the same time and that is exactly the point."
   }
 ]
