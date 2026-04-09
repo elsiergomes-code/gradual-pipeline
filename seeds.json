@@ -1,0 +1,42 @@
+[
+  {
+    "id": "float_tool",
+    "pillar": "AI + Work",
+    "hook": "I started at Fairmont with zero coding background. My manager noticed an Excel file I built to track the front desk cash float. It auto-timestamps every transaction, auto-calculates the remaining balance, has a drop-down so Elsie as an agent would never type the wrong transaction type. No arithmetic signs needed — just enter the number and it handles the math. I built it to understand how I can ease my work during high pressure times at the front with more than 100 checkins everyday and how to minimize number of errors in early months working with new systems. so the tool not only proved how AI can be helpful to build a tool efficiently for efficiency as well as ease my mind during service."
+  },
+  {
+    "id": "mom_augustina",
+    "pillar": "House of Augustina",
+    "hook": "My mom Augustina is a fashion designer who never charged what her work was worth. Since I was a kid, my sister and I had the best couture dresses in Dhaka — in a city where fashion is rare. Her portfolio had every sketch, every colour palette, everything. She loved the craft so much she forgot to love the money. House of Augustina is finishing what she started. I'm the daughter who understands the market."
+  },
+  {
+    "id": "colour_wheel_origin",
+    "pillar": "AI Tools",
+    "hook": "I got tired of manually hunting for colour combinations apps across all app stores to set a colour palette every time I started a new project — a logo, an outfit, a website, an edit. So I built an app that does the math. You pick a base colour, you tell it the mood and what you're making, and it generates the full palette with correct contrast and harmony. It's live at wheel.houseofaugustina.com and it's free. I made it in Lovable, deployed on Vercel, connected a custom API. The whole thing took less than two weeks and I had never built an app before."
+  },
+  {
+    "id": "pandemic_start",
+    "pillar": "Origin",
+    "hook": "I landed in Canada in August 2019. By March 2020 everything was locked down. Online classes, no human contact, no 1-on-1 with professors, rent was always on time because i was always resourceful on how to get the job done even in the hardest of the situations. those skills help me to date and learnt by seeing parents as examples and by being trained by them too. I worked nights at Loblaws and days as an admin assistant for a consulting firm, studying accounting full-time. That pressure is where I stopped waiting for permission. I learned to trust myself because there was genuinely no one else available."
+  },
+  {
+    "id": "holdco_structure",
+    "pillar": "Gradual Holdings",
+    "hook": "I incorporated Gradual Holdings Inc. before I had a single client. The IP comes first — Execution Brief template, Infinite Colour Wheel app, the canvas painting series — all owned by the HoldCo, licensed to the operating companies. That's the structure. Most people build the business first and figure out ownership later. I drew the diagram first. Because I watched too many people lose the thing they made."
+  },
+  {
+    "id": "art_class_dhaka",
+    "pillar": "Art",
+    "hook": "I had an art class in Dhaka for a year and a half. Three hours in that room felt like nothing — no time, no hunger, no noise from outside. I exhibited work with my classmates. That feeling of being fully inside a thing is the only benchmark I use now for whether a project is worth doing. If it doesn't have that pull, it's not the right project yet."
+  },
+  {
+    "id": "gradual_mission",
+    "pillar": "Gradual Holdings",
+    "hook": "The company is called Gradual Holdings because nothing that lasts gets built fast. The slogan is: where raw state becomes refined reality. Raw state is the idea in your head at 2am that you haven't told anyone yet. Refined reality is the thing that exists in the world and works. AI is what closes the gap between those two things faster than any other tool in history. That's the entire business model."
+  },
+  {
+    "id": "sewing_graduation",
+    "pillar": "House of Augustina",
+    "hook": "My diploma is in accounting. I hand-sewed my graduation dress. No machine, no pattern software, no formal training beyond A-levels. I drew the design first, then cut the fabric, then stitched it. It fit. That dress is proof of concept — not for fashion, but for the idea that what you were built to do will come out regardless of what credential you're holding."
+  }
+]
