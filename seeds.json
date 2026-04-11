@@ -84,18 +84,64 @@
     "hook": "My diploma is in accounting. I hand-sewed my graduation dress — no machine, no pattern software. I drew the design, cut the fabric, stitched it myself. It fit. I have been trying to figure out ever since whether the accounting was the detour or the foundation. I still don't have a clean answer. Maybe both things are true at the same time and that is exactly the point."
   },
   {
-    "moores_law_insights":
-    "tone": "factual, no hype, written as if pouring information onto paper that will be read 200 years from now",
-    "post_one_insight_at_a_time": true,
-    "insights": [
-    "The transistor was the seed. Six decades of doubling was the growing season. AI is the harvest.",
-    "AI is not a tool. It is infrastructure — the same way electricity rewired factories without replacing them.",
-    "We are at the knee of the curve. The graph has gone vertical. The window of advantage is still open.",
-    "My mother built an ISP in 2002. I watched the internet go from advantage to mandatory infrastructure. AI is at that same point now.",
-    "The businesses that move early on a compounding resource compound that decision for decades.",
-    "AI is the compressed thinking of millions of humans — their patterns, decisions, and expertise — available at any hour at any scale.",
-    "The graph does not end. It just needs a bigger piece of paper.",
-    "When silicon hit its physical limit, the curve continued through GPU parallelism, 3D stacking, and AI chips. It always finds a new engine.",
-    "Most businesses today are where a business owner was in 2002 — they have heard of it but have not built around it yet.",
-    "Moore's Law spent 60 years creating the conditions AI needed. It was building toward this the whole time."
-  ]
+    "id": "moores_law_harvest",
+    "pillar": "Gradual Holdings",
+    "post_type": "insight",
+    "hook": "The transistor was the seed. Six decades of doubling was the growing season. AI is the harvest.",
+    "tone": "factual, no hype, written as if pouring information onto paper that will be read 200 years from now"
+  },
+  {
+    "id": "moores_law_infrastructure",
+    "pillar": "Gradual Holdings",
+    "post_type": "insight",
+    "hook": "AI is not a tool. It is infrastructure — the same way electricity rewired factories without replacing them."
+  },
+  {
+    "id": "moores_law_knee",
+    "pillar": "Gradual Holdings",
+    "post_type": "insight",
+    "hook": "We are at the knee of the curve. The graph has gone vertical. The window of advantage is still open."
+  },
+  {
+    "id": "moores_law_isp",
+    "pillar": "Origin",
+    "post_type": "document",
+    "hook": "My mother built an ISP in 2002. I watched the internet go from advantage to mandatory infrastructure. AI is at that same point now."
+  },
+  {
+    "id": "moores_law_early_movers",
+    "pillar": "Gradual Holdings",
+    "post_type": "insight",
+    "hook": "The businesses that move early on a compounding resource compound that decision for decades."
+  },
+  {
+    "id": "moores_law_compressed_thinking",
+    "pillar": "Gradual Holdings",
+    "post_type": "insight",
+    "hook": "AI is the compressed thinking of millions of humans — their patterns, decisions, and expertise — available at any hour at any scale."
+  },
+  {
+    "id": "moores_law_bigger_paper",
+    "pillar": "Gradual Holdings",
+    "post_type": "insight",
+    "hook": "The graph does not end. It just needs a bigger piece of paper."
+  },
+  {
+    "id": "moores_law_new_engine",
+    "pillar": "AI Tools",
+    "post_type": "insight",
+    "hook": "When silicon hit its physical limit, the curve continued through GPU parallelism, 3D stacking, and AI chips. It always finds a new engine."
+  },
+  {
+    "id": "moores_law_2002",
+    "pillar": "Origin",
+    "post_type": "document",
+    "hook": "Most businesses today are where a business owner was in 2002 — they have heard of it but have not built around it yet."
+  },
+  {
+    "id": "moores_law_conditions",
+    "pillar": "Gradual Holdings",
+    "post_type": "insight",
+    "hook": "Moore's Law spent 60 years creating the conditions AI needed. It was building toward this the whole time."
+  }
+]
