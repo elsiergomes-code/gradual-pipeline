@@ -68,13 +68,11 @@ SEEDS_FILE         = "seeds.json"
 
 TORONTO_TZ = pytz.timezone("America/Toronto")
 
-# Strict cycle — never random
 POST_TYPE_CYCLE = ["insight", "document", "tension"]
 
 
 # ---------------------------------------------------------------------------
 # Post type prompt instructions
-# Each targets a specific LinkedIn algorithm signal + comment psychology
 # ---------------------------------------------------------------------------
 
 POST_TYPE_INSTRUCTIONS = {
@@ -82,99 +80,124 @@ POST_TYPE_INSTRUCTIONS = {
     "insight": """
 POST TYPE: Insight — engineered for SHARES and REACH.
 
-Goal: write something so precise the reader stops scrolling and thinks
-"I've never seen it put that way but that's exactly right."
-They share it because sharing it makes them look like someone who sees clearly.
+VOICE AND TONE — THIS IS THE MOST IMPORTANT INSTRUCTION:
+Write as an encouraging, passionate thought leader who genuinely wants the reader
+to understand and benefit from what they are reading. Not a lecturer. Not a
+Silicon Valley insider. Someone who has lived through something and is sharing
+what they actually learned in plain language that anyone can follow.
+
+The reader may have zero background on AI, technology, or business. Write as if
+you are explaining something to a smart friend who has never heard of this topic
+before. Every concept that could be unfamiliar must be explained in one plain
+sentence before moving on. The insight should feel like a door opening, not a
+door closing.
+
+Warmth is not weakness. Passion is not hype. You can be direct and encouraging
+at the same time. The reader should feel smarter after reading this post, not
+smaller.
 
 Structure:
-- Open with a single sharp statement. No preamble. No "I've been thinking about..."
-  Just the truth, stated plainly. Slightly uncomfortable — the kind of thing
-  most people sense but haven't said out loud yet.
-- Middle: 2-3 short paragraphs building the case with specific observations.
-  No theory. No framework names. Just what you actually see happening.
-- End with one line that lands like a door closing. Not a question.
-  A statement that leaves a small echo. Something the reader will still be
-  thinking about in an hour.
+- Open with a single clear observation anyone can immediately understand.
+  No jargon. No insider language. Just something true, stated plainly.
+- Middle: 2-3 short paragraphs that build the idea with real examples.
+  If you use a technical term, explain it immediately in plain words.
+  Example: "AI agents — which are basically AI systems that can take actions
+  on your behalf without you needing to be there — can now handle..."
+- End with one encouraging line that makes the reader feel like they can
+  act on this. Not a question. A statement that opens a door.
 
-Comment trigger: reader types "this" or "exactly" or shares their own version
-of the same observation. The post earns the comment by being so precise
-that silence feels wrong.
-
-NEVER end with a question. NEVER say "drop a comment." The post does the work.
+NEVER end with a question. NEVER use buzzwords without explaining them first.
+NEVER make the reader feel like they need a computer science degree to understand.
+The post earns shares by making people feel seen and informed, not impressed.
 """.strip(),
 
     "document": """
 POST TYPE: Document — engineered for SAVES and TRUST.
 
-Goal: show the actual work. Not the cleaned-up lesson — the thing happening
-right now, with specific details that prove you were really there doing it.
+VOICE AND TONE — THIS IS THE MOST IMPORTANT INSTRUCTION:
+Write as a founder documenting the real work in progress — warm, honest, and
+specific. The reader does not need to know what Railway or APScheduler is before
+reading this post. When you name a tool, explain what it does in one plain phrase.
+Example: "Railway — the platform I use to keep the automation running in the
+cloud — crashed because..."
+
+The goal is for someone who has never built anything technical to follow along
+and feel like they understand exactly what happened and why it matters. Specificity
+builds trust. Plain language makes the specificity accessible.
+
+Write like you are telling a friend what happened today — not writing a case study.
 
 Structure:
 - Open with one concrete moment. Something specific that happened.
-  Not "I've been building X" — more like "Yesterday I hit a wall with X
-  and here is exactly what I found."
+  Ground it in reality immediately.
 - Middle: walk through what you did, what broke, what you tried, what worked.
-  Name the actual tools (Make.com, Railway, Lovable, Claude, kie.ai, Framer).
-  Name actual numbers if you have them. Specificity is trust.
-- End with where the build is right now — not the lesson, not the takeaway.
-  Just: this is where it is today. Leave it open. The reader should feel
-  like they can check back in two days and get the next episode.
+  Name the actual tools but always follow a tool name with what it does in
+  plain language if there is any chance the reader does not know.
+  Name actual numbers if you have them.
+- End with where the build is right now. Leave it open like an episode ending.
+  The reader should feel like they are following a story, not reading a tutorial.
 
-Comment trigger: "I had the exact same issue with X" or "which tool did you
-use for Y?" — the specific detail you named just solved or named something
-they were stuck on.
+Comment trigger: "I had the exact same issue" or "which tool did you use for Y?"
 """.strip(),
 
     "tension": """
 POST TYPE: Tension — engineered for COMMENTS.
 
-This is the most important post type for the algorithm. Comments are the signal
-LinkedIn weights most. One real comment thread can 10x distribution.
+VOICE AND TONE — THIS IS THE MOST IMPORTANT INSTRUCTION:
+Write as someone genuinely sitting with an unresolved question — warm, honest,
+and human. Not cold and philosophical. Not a LinkedIn thought experiment.
+A real tension you are actually living with, shared in a way that makes the
+reader feel like you are having a conversation with them, not presenting a thesis.
 
-Goal: write something unresolved. Not a problem you've solved — a tension
-you are actually sitting with. Something with two valid sides and no clean answer.
-Something where the reader has an opinion and needs to share it because
-you haven't resolved it for them.
+Explain the tension in plain language that anyone can follow. If the tension
+involves technical or business concepts, set them up first so the reader
+understands what is at stake before you get into the unresolved part.
+
+The reader should feel like you genuinely do not know the answer — because you
+do not — and that their opinion actually matters to you. That is what drives
+real comments.
 
 Structure:
-- Open by naming the tension directly. Two things that are both true and
-  pulling in opposite directions. State them plainly, no decoration.
-- Middle: give each side its best argument. Don't pick one. Make both
-  sides feel real and valid. The reader's job is to pick one.
-- End with the line you are actually sitting with right now. Not "what do
-  you think?" — something more like a statement of where you are that implies
-  you genuinely don't know the answer yet. Their brain needs to resolve it.
-  That is when they type.
+- Open by naming the tension in plain everyday language. Two things that are
+  both true and pulling in opposite directions. Anyone should understand both
+  sides immediately.
+- Middle: give each side its full argument. Make both sides feel real and valid.
+  Write with warmth toward both sides — you are not debating, you are sharing.
+- End with the honest line of where you are sitting right now. Not resolved.
+  Not a call to action. Just the truth of where you are with it.
 
-Comment triggers: strong agreement, strong disagreement, or a breakthrough
-in their own thinking — "oh wait, I've been thinking about this wrong."
-All three drive comments. Post should feel like walking into a conversation
-already in progress.
-
-CRITICAL: do not resolve the tension. Do not end with a lesson or conclusion.
-End with the unresolved thing, stated honestly. Silence after reading this
-post should feel impossible.
+CRITICAL: do not resolve the tension. Do not end with a lesson.
+End with the unresolved thing, stated with honesty and warmth.
 """.strip(),
 
 }
 
 
-# Image visual language per post type
+# ---------------------------------------------------------------------------
+# Image style — STRICTLY NO PEOPLE, NO FACES, NO STOCK PHOTOS
+# ---------------------------------------------------------------------------
+
 IMAGE_STYLE = {
     "insight": (
-        "Minimalist editorial photograph, strictly black and white, extreme high contrast, "
-        "dramatic single light source, abstract geometric composition, no text, no logos, "
-        "the visual feeling of sudden clarity. Professional LinkedIn visual."
+        "Abstract digital art, dark navy background, glowing geometric light trails, "
+        "data streams visualized as flowing lines of light, deep blues and electric teals, "
+        "cinematic and minimal. "
+        "STRICT RULES: absolutely no people, no faces, no human figures, no portraits, "
+        "no hands, no bodies. Pure abstract visual only. No text. No logos."
     ),
     "document": (
-        "Minimalist editorial photograph, strictly black and white, high contrast, "
-        "sense of work in progress — tools, process, hands, screens, making something. "
-        "Documentary feel. No text, no logos. Professional LinkedIn visual."
+        "Abstract digital art, dark background, visual representation of a system being built — "
+        "interconnected nodes, circuit-like patterns, soft glowing connections between points, "
+        "deep charcoal and warm amber tones, sense of things coming together. "
+        "STRICT RULES: absolutely no people, no faces, no human figures, no portraits, "
+        "no hands, no bodies. Pure abstract visual only. No text. No logos."
     ),
     "tension": (
-        "Minimalist editorial photograph, strictly black and white, high contrast, "
-        "two opposing forces in frame — light and shadow, open and closed, motion and stillness. "
-        "Visual feeling of an unresolved question. No text, no logos. Professional LinkedIn visual."
+        "Abstract digital art, split composition, two opposing visual forces — "
+        "one side cool deep blue, one side warm amber, meeting at a sharp boundary in the center, "
+        "minimal geometric forms, sense of balance and tension simultaneously. "
+        "STRICT RULES: absolutely no people, no faces, no human figures, no portraits, "
+        "no hands, no bodies. Pure abstract visual only. No text. No logos."
     ),
 }
 
@@ -187,9 +210,10 @@ def load_system_prompt() -> str:
     if not os.path.exists(SYSTEM_PROMPT_FILE):
         logger.warning("%s not found — using fallback voice.", SYSTEM_PROMPT_FILE)
         return (
-            "You are Elsie Gomes, founder of Gradual Holdings Inc. "
-            "Write in a direct, warm, founder-building-in-public voice. "
-            "No corporate language. Short punchy sentences."
+            "You are Elsie Gomes, founder of Gradual Holdings Inc. and rawstate.ai. "
+            "Write as an encouraging, passionate thought leader. "
+            "Warm, direct, and accessible. Never use jargon without explaining it. "
+            "Every reader should feel smarter after reading your post, not smaller."
         )
     with open(SYSTEM_PROMPT_FILE, encoding="utf-8") as f:
         return f.read().strip()
@@ -208,7 +232,6 @@ def load_seeds() -> list:
 
 
 def pick_seed(seeds: list, pillar: str, post_type: str) -> dict | None:
-    """Match by pillar + post_type first, fall back to pillar, then any."""
     if not seeds:
         return None
 
@@ -230,11 +253,6 @@ def pick_seed(seeds: list, pillar: str, post_type: str) -> dict | None:
 # ---------------------------------------------------------------------------
 
 def read_next_queued_topic():
-    """
-    Returns (row_index, row_dict, all_rows, post_type).
-    Post type cycles insight → document → tension based on done count.
-    CSV post_type column can override if explicitly set.
-    """
     with open(TOPICS_CSV, newline="", encoding="utf-8") as f:
         rows = list(csv.DictReader(f))
 
@@ -280,7 +298,13 @@ def build_user_prompt(
         )
 
     parts.append(
-        "\nWrite the post now. No title. No subject line. "
+        "\nCRITICAL REMINDER before you write: "
+        "This post must be fully understandable by someone with zero background "
+        "in AI, technology, or business. If you use any term that could be unfamiliar, "
+        "explain it immediately in plain language. Write warmly. Write with encouragement. "
+        "The reader should feel like a door just opened for them, not like they missed "
+        "a class they should have taken. "
+        "\n\nWrite the post now. No title. No subject line. "
         "Start with the first word. Hashtags on the final line only."
     )
 
@@ -321,7 +345,11 @@ def _kie_headers() -> dict:
 
 def generate_image(topic: str, post_text: str, post_type: str) -> Image.Image:
     style = IMAGE_STYLE.get(post_type, IMAGE_STYLE["insight"])
-    image_prompt = f"{style} Concept: {topic}."
+    image_prompt = (
+        f"{style} "
+        f"The visual should abstractly represent this concept: {topic}. "
+        f"Remember: no people, no faces, no human figures under any circumstances."
+    )
 
     payload = {
         "model": "flux-kontext-pro",
@@ -582,7 +610,6 @@ def run_pipeline() -> None:
     logger.info("Pipeline run started")
     logger.info("=" * 60)
 
-    # 1. Pick topic + post type
     row_index, row, all_rows, post_type = read_next_queued_topic()
     if row is None:
         logger.info("No queued topics remaining. Nothing to post.")
@@ -598,41 +625,32 @@ def run_pipeline() -> None:
     logger.info("Angle     : %s", angle or "—")
     logger.info("Post type : %s", post_type.upper())
 
-    # 2. Pick seed
     seed = pick_seed(SEEDS, pillar, post_type)
     if seed:
         logger.info("Seed      : %s (%s)", seed["id"], seed.get("post_type", "any"))
     else:
         logger.info("Seed      : none")
 
-    # 3. Generate post
     logger.info("Generating post via Claude [type=%s]...", post_type)
     post_text = generate_linkedin_post(topic, angle, notes, post_type, SYSTEM_PROMPT, seed)
     logger.info("Post generated (%d chars):\n%s", len(post_text), post_text[:400] + "...")
 
-    # 4. Generate image
     logger.info("Requesting image from kie.ai [style=%s]...", post_type)
     base_image = generate_image(topic, post_text, post_type)
     logger.info("Image received: %dx%d", base_image.width, base_image.height)
 
-    # 5. Logo overlay
     final_image = overlay_logo(base_image)
-
-    # 6. Save
     image_path = save_image(final_image, TEMP_IMAGE)
     logger.info("Image saved to %s", image_path)
 
-    # 7. Post
     post_url = post_to_linkedin(post_text, image_path)
     logger.info("Posted: %s", post_url)
 
-    # 8. Log
     seed_id = seed["id"] if seed else "none"
     mark_topic_done(row_index, all_rows, post_type)
     append_to_log(topic, pillar, post_type, seed_id, post_url)
     logger.info("CSV + log updated.")
 
-    # 9. Cleanup
     if os.path.exists(image_path):
         os.remove(image_path)
 
