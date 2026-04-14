@@ -67,6 +67,11 @@ EVOLUTION RULE:
 
 # ── Issue counter ─────────────────────────────────────────────────────────────
 def get_issue_number():
+    # On Railway use env variable — local file doesn't persist between deploys
+    env_count = os.getenv("NEWSLETTER_ISSUE_COUNT")
+    if env_count is not None:
+        return int(env_count) + 1
+    # Locally use file
     if os.path.exists(ISSUE_COUNT_FILE):
         with open(ISSUE_COUNT_FILE, "r") as f:
             data = json.load(f)
@@ -75,8 +80,11 @@ def get_issue_number():
 
 
 def save_issue_number(n):
-    with open(ISSUE_COUNT_FILE, "w") as f:
-        json.dump({"count": n}, f)
+    if os.getenv("NEWSLETTER_ISSUE_COUNT") is None:
+        with open(ISSUE_COUNT_FILE, "w") as f:
+            json.dump({"count": n}, f)
+    else:
+        print(f"  -> IMPORTANT: Update NEWSLETTER_ISSUE_COUNT to {n} in Railway variables")
 
 
 # ── Pillar selection ──────────────────────────────────────────────────────────
