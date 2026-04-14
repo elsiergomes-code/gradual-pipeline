@@ -1,20 +1,18 @@
 """
 scheduler.py — Master scheduler for Gradual Holdings Inc.
 Runs all agents under one APScheduler instance on Railway.
-
 Jobs:
   - LinkedIn post: every 2 days at 8:00 AM Toronto
   - Newsletter:    every Tuesday at 8:00 AM Toronto
 """
-
 import sys
 import logging
 from datetime import datetime, timedelta
-
 import pytz
 from apscheduler.schedulers.blocking import BlockingScheduler
 from apscheduler.triggers.cron import CronTrigger
 from apscheduler.triggers.interval import IntervalTrigger
+from apscheduler.triggers.date import DateTrigger
 
 # ── Logging ───────────────────────────────────────────────────────────────────
 logging.basicConfig(
@@ -23,7 +21,6 @@ logging.basicConfig(
     datefmt="%Y-%m-%d %H:%M:%S",
 )
 logger = logging.getLogger("gradual_scheduler")
-
 TORONTO_TZ = pytz.timezone("America/Toronto")
 
 
@@ -58,13 +55,21 @@ if __name__ == "__main__":
         run_newsletter()
         sys.exit(0)
 
-    # Schedule LinkedIn: every 2 days at 8am Toronto
     now = datetime.now(TORONTO_TZ)
     next_8am = now.replace(hour=8, minute=0, second=0, microsecond=0)
     if next_8am <= now:
         next_8am += timedelta(days=1)
 
-    # Schedule newsletter: every Tuesday at 8am Toronto
+    # ── TEST MODE: newsletter fires in 2 minutes ──────────────────────────────
+    # TO RESTORE: delete the next 2 lines and uncomment the CronTrigger block below
+    newsletter_test_time = now + timedelta(minutes=2)
+    newsletter_trigger = DateTrigger(run_date=newsletter_test_time, timezone=TORONTO_TZ)
+
+    # ── PRODUCTION: uncomment this block and delete the 2 lines above ─────────
+    # newsletter_trigger = CronTrigger(
+    #     day_of_week="tue", hour=8, minute=0, timezone=TORONTO_TZ
+    # )
+
     scheduler = BlockingScheduler(timezone=TORONTO_TZ)
 
     scheduler.add_job(
@@ -77,9 +82,9 @@ if __name__ == "__main__":
 
     scheduler.add_job(
         run_newsletter,
-        trigger=CronTrigger(day_of_week="tue", hour=8, minute=0, timezone=TORONTO_TZ),
+        trigger=newsletter_trigger,
         id="newsletter",
-        name="The Raw State — every Tuesday 08:00 Toronto",
+        name="The Raw State — newsletter",
         misfire_grace_time=3600,
     )
 
@@ -87,7 +92,7 @@ if __name__ == "__main__":
     logger.info("Gradual Holdings Inc. — Master Scheduler")
     logger.info("=" * 50)
     logger.info(f"LinkedIn  : every 2 days at 08:00 Toronto")
-    logger.info(f"Newsletter: every Tuesday at 08:00 Toronto")
+    logger.info(f"Newsletter: TEST MODE — firing at {newsletter_test_time.strftime('%H:%M:%S')} Toronto")
     logger.info(f"Next LinkedIn run: {next_8am.strftime('%Y-%m-%d %H:%M:%S %Z')}")
     logger.info("Press Ctrl+C to stop.")
     logger.info("=" * 50)
